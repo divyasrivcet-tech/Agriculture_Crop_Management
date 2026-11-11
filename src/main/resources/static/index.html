@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agriculture Crop Management and Yield Analysis</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header><div class="eyebrow">AGRICULTURE MANAGEMENT</div><h1>Crop Management & Yield Analysis System</h1><p>Manage farmers, fields, crops, seasons and yield records in one place.</p></header>
+    <section class="panel connection"><div><h2>Database connection</h2><p>Check whether Java is connected to PostgreSQL.</p></div><button id="healthButton" type="button">Check PostgreSQL Connection</button><pre id="healthResult">Connection status has not been checked yet.</pre></section>
+    <nav id="moduleTabs" class="tabs" aria-label="Project modules">
+      <button class="tab active" data-module="farmers">Farmers</button><button class="tab" data-module="fields">Fields</button><button class="tab" data-module="crops">Crops</button><button class="tab" data-module="seasons">Seasons</button><button class="tab" data-module="yield-records">Yield Records</button>
+    </nav>
+    <section class="panel">
+      <div class="section-heading"><div><span class="eyebrow" id="moduleEyebrow">MODULE 01</span><h2 id="formTitle">Farmer Management</h2></div><span class="count" id="recordCount">0 records</span></div>
+      <form id="recordForm"><input type="hidden" id="recordId"><div id="formFields" class="form-grid"></div><div class="form-actions"><button type="submit" id="saveButton">Add Farmer</button><button type="button" class="secondary" id="cancelButton" hidden>Cancel Edit</button></div></form>
+      <p id="formMessage" role="status" aria-live="polite"></p>
+    </section>
+    <section class="panel">
+      <div class="section-heading"><div><span class="eyebrow">SAVED DATA</span><h2 id="tableTitle">Farmer Records</h2></div><button type="button" class="secondary" id="refreshButton">Refresh Records</button></div>
+      <div class="table-wrap"><table><thead id="tableHead"></thead><tbody id="tableBody"><tr><td>Loading records...</td></tr></tbody></table></div>
+    </section>
+    <footer>Java · Spring Boot · PostgreSQL · HTML · CSS · JavaScript · Python</footer>
+  </main>
+  <script src="script.js"></script>
+</body></html>
